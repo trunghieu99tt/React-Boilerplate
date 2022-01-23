@@ -6,6 +6,16 @@ A simple, ready to go react boilerplate
 
 In the project directory, you can run:
 
+### Install
+
+```bash
+$ npm install
+
+or
+
+$ yarn
+```
+
 ### Run
 
 ```bash
@@ -56,15 +66,24 @@ Your app is ready to be deployed!
 ### Generate components
 
 ```bash
-$ npm run generate
+$ npm run generate [ComponentName]
 
 or
 
-$ yarn generate
+$ yarn generate [ComponentName]
 
 ```
 
 Generate component in `src` folder using cli
+
+## Docker
+
+You can run the app in the development mode with Docker.
+
+```bash
+$ docker build -t [Put_whatever_name_you_want_here] .
+$ docker run -p 3000:3000 [Put_whatever_name_you_want_here]
+```
 
 ## Architecture
 
