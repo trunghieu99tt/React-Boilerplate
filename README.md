@@ -82,7 +82,8 @@ You can run the app in the development mode with Docker.
 
 ```bash
 $ docker build -t [Put_whatever_name_you_want_here] .
-$ docker run -p 3000:3000 [Put_whatever_name_you_want_here]
+
+$ docker run --rm  -p 3000:80 [Put_whatever_name_you_want_here]
 ```
 
 ## Architecture
