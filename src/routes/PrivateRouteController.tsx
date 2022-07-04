@@ -1,8 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
-// components
-import PrivateRoute from '@components/routes/PrivateRoute';
 
 const PrivateRouteController = () => {
   return (

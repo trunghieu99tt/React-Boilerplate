@@ -1,12 +1,14 @@
-import ReactDOM from 'react-dom';
 import React, { Suspense } from 'react';
-import { RecoilRoot } from 'recoil';
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 
 import AppProvider from '@context/app.context';
 
+import { Provider } from 'react-redux';
 import App from './App';
+import { store } from './store';
 
 import './index.css';
 
@@ -20,7 +22,9 @@ ReactDOM.render(
         <AppProvider>
           <RecoilRoot>
             <HelmetProvider>
-              <App />
+              <Provider store={store}>
+                <App />
+              </Provider>
             </HelmetProvider>
           </RecoilRoot>
         </AppProvider>
