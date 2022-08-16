@@ -5,10 +5,6 @@ import { SocketConnector } from './socket';
 export const useSocket = (): void => {
   const { dispatch } = useAppContext();
 
-  useEffect(() => {
-    initSocket();
-  }, []);
-
   const initSocket = () => {
     const socketConnector = new SocketConnector();
     const socketInstance = socketConnector.instance;
@@ -18,4 +14,8 @@ export const useSocket = (): void => {
       dispatch({ type: 'SET_SOCKET', payload: socketInstance });
     });
   };
+
+  useEffect(() => {
+    initSocket();
+  }, []);
 };
