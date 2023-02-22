@@ -11,7 +11,6 @@ const alias = (prefix) => ({
   '@images': `${prefix}/assets/images/`,
   '@components': `${prefix}/components/`,
   '@constants': `${prefix}/constants`,
-  '@redux': `${prefix}/redux/`,
 });
 
 module.exports = alias;

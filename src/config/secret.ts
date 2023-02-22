@@ -1,9 +1,5 @@
-import * as dotenv from 'dotenv';
-
-dotenv.config();
-
 export const getEnv = (key: string, ignore = false): string => {
-  const value = process.env[key];
+  const value = import.meta.env[key];
   if (!ignore && value === undefined) {
     console.log(`[ENV] ${key} not found!`);
   }

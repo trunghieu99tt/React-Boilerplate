@@ -4,11 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
 
-import AppProvider from '@context/app.context';
-
-import { Provider } from 'react-redux';
 import App from './App';
-import { store } from './store';
 
 import './index.css';
 
@@ -19,15 +15,11 @@ ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback={<div>Loading...</div>}>
       <BrowserRouter>
-        <AppProvider>
-          <RecoilRoot>
-            <HelmetProvider>
-              <Provider store={store}>
-                <App />
-              </Provider>
-            </HelmetProvider>
-          </RecoilRoot>
-        </AppProvider>
+        <RecoilRoot>
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
+        </RecoilRoot>
       </BrowserRouter>
     </Suspense>
   </React.StrictMode>,

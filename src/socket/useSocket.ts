@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useAppContext } from '@context/app.context';
+import { useAppContext } from '@context/store/app.context';
 import { SocketConnector } from './socket';
 
 export const useSocket = (): void => {
