@@ -1,5 +1,3 @@
-import { Socket } from 'socket.io-client';
-
 export type TTheme = 'LIGHT' | 'DARK';
 export type TScreenSize = 'DESKTOP' | 'TABLET' | 'MOBILE';
 
